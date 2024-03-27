@@ -91,7 +91,7 @@ public_users.get('/author/:author', function (req, res) {
             return res.status(200).json({ books: booksByAuthor });
         })
         .catch((error) => {
-            return res.status(500).json({ message: "Internal Server Error" });
+            return res.status(500).json({ message: "Error getting the book by author" });
         });
 });
 
@@ -118,7 +118,7 @@ public_users.get('/title/:title', function (req, res) {
             return res.status(200).json({ books: booksByTitle });
         })
         .catch((error) => {
-            return res.status(500).json({ message: "Internal Server Error" });
+            return res.status(500).json({ message: "Error getting the book by title" });
         });
 });
 
